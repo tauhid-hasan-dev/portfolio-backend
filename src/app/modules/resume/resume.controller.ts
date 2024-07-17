@@ -84,6 +84,42 @@ const getAllBlog = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleExperience = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await ResumeServices.getSingleExperience(id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Single Experience Retrieved successfully",
+    data: result,
+  });
+});
+
+const getSingleProject = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await ResumeServices.getSingleProject(id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Single Project Retrieved successfully",
+    data: result,
+  });
+});
+
+const getSingleBlog = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await ResumeServices.getSingleBlog(id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Single Blog Post Retrieved successfully",
+    data: result,
+  });
+});
+
 export const ResumeController = {
   createExperience,
   createSkill,
@@ -93,4 +129,7 @@ export const ResumeController = {
   getAllSkills,
   getAllProjects,
   getAllBlog,
+  getSingleExperience,
+  getSingleProject,
+  getSingleBlog,
 };

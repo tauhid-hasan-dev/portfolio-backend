@@ -13,4 +13,8 @@ router.get("/skills", ResumeController.getAllSkills);
 router.get("/projects", ResumeController.getAllProjects);
 router.get("/blogs", ResumeController.getAllBlog);
 
+router.get("/experiences/:id", ResumeController.getSingleExperience);
+router.get("/projects/:id", ResumeController.getSingleProject);
+router.get("/blogs/:id", ResumeController.getSingleBlog);
+
 export const resumeRoutes = router;

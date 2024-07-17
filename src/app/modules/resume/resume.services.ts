@@ -87,6 +87,35 @@ const getAllBlog = async () => {
   return result;
 };
 
+const getSingleExperience = async (id: string) => {
+  const updatedData = await prisma.experience.findUnique({
+    where: {
+      id: id,
+    },
+  });
+
+  return updatedData;
+};
+const getSingleProject = async (id: string) => {
+  const updatedData = await prisma.project.findUnique({
+    where: {
+      id: id,
+    },
+  });
+
+  return updatedData;
+};
+
+const getSingleBlog = async (id: string) => {
+  const updatedData = await prisma.blog.findUnique({
+    where: {
+      id: id,
+    },
+  });
+
+  return updatedData;
+};
+
 export const ResumeServices = {
   createExperience,
   createSkill,
@@ -96,4 +125,7 @@ export const ResumeServices = {
   getAllSkills,
   getAllProjects,
   getAllBlog,
+  getSingleExperience,
+  getSingleProject,
+  getSingleBlog,
 };
