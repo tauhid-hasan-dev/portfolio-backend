@@ -74,6 +74,16 @@ const getAllProjects = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllBlog = catchAsync(async (req: Request, res: Response) => {
+  const result = await ResumeServices.getAllBlog();
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Blog posts retrieved successfully",
+    data: result,
+  });
+});
+
 export const ResumeController = {
   createExperience,
   createSkill,
@@ -82,4 +92,5 @@ export const ResumeController = {
   getAllExperiences,
   getAllSkills,
   getAllProjects,
+  getAllBlog,
 };
