@@ -25,7 +25,7 @@ app.use("/api", routes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send({
-    Message: "Pet love server is running.......",
+    Message: "This is tasan portfolio server: Server running successfully.....",
   });
 });
 

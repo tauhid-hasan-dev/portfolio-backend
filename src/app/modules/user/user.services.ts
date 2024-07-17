@@ -199,13 +199,6 @@ const deleteFromDb = async (id: string) => {
         throw new Error(`Pet with id ${id} does not exist.`);
       }
 
-      // Delete adoption requests associated with the pet first
-      await transactionClient.adoptionRequest.deleteMany({
-        where: {
-          userId: id,
-        },
-      });
-
       // Delete the pet record
       const deletedUser = await transactionClient.user.delete({
         where: {
