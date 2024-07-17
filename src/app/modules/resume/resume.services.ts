@@ -2,6 +2,7 @@ import { Request } from "express";
 import prisma from "../../../shared/prisma";
 
 const createExperience = async (req: Request) => {
+  console.log(req.body);
   const experienceData = {
     company: req.body.company,
     position: req.body.position,
