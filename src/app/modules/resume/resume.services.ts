@@ -72,10 +72,16 @@ const getAllExperiences = async () => {
   return result;
 };
 
+const getAllSkills = async () => {
+  const result = await prisma.skill.findMany();
+  return result;
+};
+
 export const ResumeServices = {
   createExperience,
   createSkill,
   createProject,
   createBlog,
   getAllExperiences,
+  getAllSkills,
 };

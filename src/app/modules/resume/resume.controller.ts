@@ -54,10 +54,21 @@ const getAllExperiences = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllSkills = catchAsync(async (req: Request, res: Response) => {
+  const result = await ResumeServices.getAllSkills();
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Skills retrieved successfully",
+    data: result,
+  });
+});
+
 export const ResumeController = {
   createExperience,
   createSkill,
   createProject,
   createBlog,
   getAllExperiences,
+  getAllSkills,
 };
