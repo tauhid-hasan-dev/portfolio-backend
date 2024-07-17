@@ -78,8 +78,11 @@ const getAllSkills = async () => {
 };
 
 const getAllProjects = async () => {
-  const result = await prisma.project.findMany();
-  return result;
+  return await prisma.project.findMany({
+    include: {
+      stack: true,
+    },
+  });
 };
 
 const getAllBlog = async () => {
