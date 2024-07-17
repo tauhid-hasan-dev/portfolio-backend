@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "4d6946b1-11ea-4cd9-b2d0-9bc81ec8c4f7",
+		"name": "pet-adoption-platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31250839",
+		"_collection_link": "https://me2222-4499.postman.co/workspace/me-Workspace~3197b940-23a6-4804-9622-d122fe46b31d/collection/32340241-4d6946b1-11ea-4cd9-b2d0-9bc81ec8c4f7?action=share&source=collection_link&creator=31250839"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Afjal Hasan\",\r\n    \"email\": \"afjal@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/register",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIyZjIwOWRhLWJiZTEtNDZhMy05MWI1LTljZjA2YzFlOTVhZiIsImVtYWlsIjoiYWZqYWxAZ21haWwuY29tIiwiaWF0IjoxNzE0NDE0ODExLCJleHAiOjE3MTcwMDY4MTF9.H_z5NSWet0DIlhfqWfaIOU6w3OjbIqH556T5Ltsei90",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/profile",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIyZjIwOWRhLWJiZTEtNDZhMy05MWI1LTljZjA2YzFlOTVhZiIsImVtYWlsIjoiYWZqYWxAZ21haWwuY29tIiwiaWF0IjoxNzE0NTczNzc2LCJleHAiOjE3MTcxNjU3NzZ9.xARdh7l05ASguhw5yTQlZdR26mFDOJzTkCjbtRsits0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Abu aslam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/profile",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\": \"afjal@gmail.com\",\r\n   \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/login",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pets",
+			"item": [
+				{
+					"name": "update-pet",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZTY4ZjVmLWNmNmYtNGUxNy05YTVjLWVhY2EwYTdhYjMxNSIsImVtYWlsIjoiYW5zYXJAZ21haWwuY29tIiwiaWF0IjoxNzE0NDA5NDY5LCJleHAiOjE3MTcwMDE0Njl9.enGVfiGWowQQxEQfWcL-IcziSlpv0BzRN_tFtPsqo2w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"location\": \"Putted Dog\",\r\n   \"name\": \"Putted\",\r\n   \"breed\": \"fatty\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/pets/07c5c96f-eda7-4476-9876-fdd44c330603",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"pets",
+								"07c5c96f-eda7-4476-9876-fdd44c330603"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-pets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZTY4ZjVmLWNmNmYtNGUxNy05YTVjLWVhY2EwYTdhYjMxNSIsImVtYWlsIjoiYW5zYXJAZ21haWwuY29tIiwiaWF0IjoxNzE0NDA5NDY5LCJleHAiOjE3MTcwMDE0Njl9.enGVfiGWowQQxEQfWcL-IcziSlpv0BzRN_tFtPsqo2w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Whiskerssy\",\r\n    \"species\": \"Cat\",\r\n    \"breed\": \"Siamesesy\",\r\n    \"age\": 4,\r\n    \"size\": \"Mediumd\",\r\n    \"location\": \"Cozy Corner Sheltersy\",\r\n    \"description\": \"Whiskers is a playful and affectionate Siamese cat. He enjoys chasing toys and cuddling up on lapssd.\",\r\n    \"temperament\": \"Playful, affectionated\",\r\n    \"medicalHistory\": \"Up to date on vaccinations, microchipped.\",\r\n    \"adoptionRequirements\": \"Whiskers would thrive in a quiet home with a patient owner who can give him plenty of attention.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/pets",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/pets?limit=5",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"pets"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "Ca",
+									"disabled": true
+								},
+								{
+									"key": "species",
+									"value": "dog",
+									"disabled": true
+								},
+								{
+									"key": "breed",
+									"value": "Siberian Husky",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "Shelter XYZ",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "sortOrder",
+									"value": "asc",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "adoption-requests",
+			"item": [
+				{
+					"name": "submit-request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZTY4ZjVmLWNmNmYtNGUxNy05YTVjLWVhY2EwYTdhYjMxNSIsImVtYWlsIjoiYW5zYXJAZ21haWwuY29tIiwiaWF0IjoxNzE0NDA5NDY5LCJleHAiOjE3MTcwMDE0Njl9.enGVfiGWowQQxEQfWcL-IcziSlpv0BzRN_tFtPsqo2w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"petId\": \"5dedacce-6934-431c-a402-afa8f96feccd\",\r\n   \"petOwnershipExperience\": \"Previous owner of a Labrador Retriever\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/adoption-request",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"adoption-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-adoption-request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZTY4ZjVmLWNmNmYtNGUxNy05YTVjLWVhY2EwYTdhYjMxNSIsImVtYWlsIjoiYW5zYXJAZ21haWwuY29tIiwiaWF0IjoxNzE0NDA5NDY5LCJleHAiOjE3MTcwMDE0Njl9.enGVfiGWowQQxEQfWcL-IcziSlpv0BzRN_tFtPsqo2w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/adoption-requests",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"adoption-requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-adoption-status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZTY4ZjVmLWNmNmYtNGUxNy05YTVjLWVhY2EwYTdhYjMxNSIsImVtYWlsIjoiYW5zYXJAZ21haWwuY29tIiwiaWF0IjoxNzE0NDA5NDY5LCJleHAiOjE3MTcwMDE0Njl9.enGVfiGWowQQxEQfWcL-IcziSlpv0BzRN_tFtPsqo2w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pet-adoption-plaform-a8.vercel.app/api/adoption-requests/f59f8a89-9723-4cd9-a999-1a31335368a8",
+							"protocol": "https",
+							"host": [
+								"pet-adoption-plaform-a8",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"adoption-requests",
+								"f59f8a89-9723-4cd9-a999-1a31335368a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
