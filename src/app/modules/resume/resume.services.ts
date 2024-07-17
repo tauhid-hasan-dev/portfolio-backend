@@ -53,8 +53,23 @@ const createProject = async (req: Request) => {
   return result;
 };
 
+const createBlog = async (req: Request) => {
+  console.log(req.body);
+  const blogData = {
+    headline: req.body.headline,
+    content: req.body.content,
+  };
+
+  const result = await prisma.blog.create({
+    data: blogData as any,
+  });
+
+  return result;
+};
+
 export const ResumeServices = {
   createExperience,
   createSkill,
   createProject,
+  createBlog,
 };

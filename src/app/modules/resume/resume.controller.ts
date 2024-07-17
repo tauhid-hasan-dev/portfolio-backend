@@ -34,8 +34,19 @@ const createProject = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const createBlog = catchAsync(async (req: Request, res: Response) => {
+  const result = await ResumeServices.createBlog(req);
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.CREATED,
+    message: "Blog post added Successfully",
+    data: result,
+  });
+});
+
 export const ResumeController = {
   createExperience,
   createSkill,
   createProject,
+  createBlog,
 };
