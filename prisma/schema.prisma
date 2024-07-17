@@ -62,17 +62,18 @@ model Blog {
 }
 
 model Project {
-  id          String        @id @default(uuid())
-  num         Int
-  category    String
-  title       String
-  description String
-  image       String
-  live        String?
-  github      String?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
-  stack       ProjectStack[]
+  id                String        @id @default(uuid())
+  num               String
+  category          String
+  title             String
+  description       String
+  image             String
+  live              String?
+  githubServer      String?
+  githubClient      String?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+  stack             ProjectStack[]
 
   @@map("projects")
 }

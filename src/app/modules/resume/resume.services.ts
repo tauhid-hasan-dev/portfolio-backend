@@ -29,7 +29,32 @@ const createSkill = async (req: Request) => {
   return result;
 };
 
+const createProject = async (req: Request) => {
+  const projectData = {
+    num: req.body.num,
+    category: req.body.category,
+    title: req.body.title,
+    description: req.body.description,
+    stack: {
+      create: req.body.stack.map((tech: { name: string }) => ({
+        name: tech.name,
+      })),
+    },
+    image: req.body.image,
+    live: req.body.live,
+    githubServer: req.body.githubServer,
+    githubClient: req.body.githubClient,
+  };
+
+  const result = await prisma.project.create({
+    data: projectData,
+  });
+
+  return result;
+};
+
 export const ResumeServices = {
   createExperience,
   createSkill,
+  createProject,
 };
