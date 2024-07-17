@@ -16,6 +16,20 @@ const createExperience = async (req: Request) => {
   return result;
 };
 
+const createSkill = async (req: Request) => {
+  const skillData = {
+    icon: req.body.icon,
+    name: req.body.name,
+  };
+
+  const result = await prisma.skill.create({
+    data: skillData,
+  });
+
+  return result;
+};
+
 export const ResumeServices = {
   createExperience,
+  createSkill,
 };

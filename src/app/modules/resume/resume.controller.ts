@@ -14,6 +14,17 @@ const createExperience = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const createSkill = catchAsync(async (req: Request, res: Response) => {
+  const result = await ResumeServices.createSkill(req);
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.CREATED,
+    message: "Skill added Successfully",
+    data: result,
+  });
+});
+
 export const ResumeController = {
   createExperience,
+  createSkill,
 };
