@@ -10,5 +10,6 @@ router.post("/blog", ResumeController.createBlog);
 
 router.get("/experiences", ResumeController.getAllExperiences);
 router.get("/skills", ResumeController.getAllSkills);
+router.get("/projects", ResumeController.getAllProjects);
 
 export const resumeRoutes = router;
