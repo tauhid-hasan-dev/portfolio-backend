@@ -8,4 +8,7 @@ router.post("/skill", ResumeController.createSkill);
 router.post("/project", ResumeController.createProject);
 router.post("/blog", ResumeController.createBlog);
 
+
+router.get("/experiences", ResumeController.getAllExperiences);
+
 export const resumeRoutes = router;
