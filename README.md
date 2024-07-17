@@ -31,7 +31,7 @@
 **Clone this repository in your machine**
 
 ```
-git clone https://github.com/tauhid-hasan-dev/pet-love-backend.git
+git clone https://github.com/tauhid-hasan-dev/portfolio-backend.git
 ```
 
 **Install yarn for node_modules**
