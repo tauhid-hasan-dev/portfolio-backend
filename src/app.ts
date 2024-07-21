@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 const app: Application = express();
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://tasan-portfolio.vercel.app"],
+  origin: ["http://localhost:3000", "https://tasan-portfolio.vercel.app, https://portfolio-dashboard-frontend-next.vercel.app/"],
   credentials: true,
 };
 
